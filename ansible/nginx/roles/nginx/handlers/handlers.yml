@@ -1,0 +1,5 @@
+###call restart for tomcat service
+# handlers:
+#   - name: start tomcat
+#     service: name=tomcat state=restarted
+#     #listen: "start tomcat"

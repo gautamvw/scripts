@@ -1,0 +1,12 @@
+---
+
+- name: Ansible playbook to configure nginx on CentOS/RPM family
+  hosts: localhost
+  remote_user: root
+
+  vars:
+    - nginx_port: 80
+    - nginx_document_root: '/usr/share/nginx/html'
+
+  roles:
+    - nginx

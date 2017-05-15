@@ -1,0 +1,9 @@
+---
+- name: Configure Tomcat server
+  template: src=nginx_default.conf dest=/etc/nginx/nginx.conf
+
+- name: Start Nginx
+  service: name=nginx state=restarted enabled=yes
+
+- name: wait for nginx to start
+  wait_for: port={{ nginx_port }}
